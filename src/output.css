@@ -1445,48 +1445,13 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .text-\[\#0B2C4D\] {
-    color: #0B2C4D;
-  }
-  .text-\[\#0B2C4\] {
-    color: #0B2C4;
-  }
-  .text-\[\#0B2C\] {
-    color: #0B2C;
-  }
-  .text-\[\#0B2\] {
-    color: #0B2;
-  }
-  .text-\[\#0B\] {
-    color: #0B;
-  }
-  .text-\[\#0\] {
-    color: #0;
-  }
-  .text-\[\#1A5276\] {
-    color: #1A5276;
-  }
-  .text-\[\#1\] {
-    color: #1;
-  }
-  .text-\[\#0006ff\] {
-    color: #0006ff;
-  }
-  .text-\[\#19\] {
-    color: #19;
-  }
-  .text-\[\#149AC5\] {
-    color: #149AC5;
-  }
-  .text-\[\#191\] {
-    color: #191;
-  }
-  .text-\[\#1919\] {
-    color: #1919;
-  }
-  .text-\[\#19197\] {
-    color: #19197;
-  }
+  .text-\[\#0B2C4D\] { color: #0B2C4D; }   /* 6 digits */
+.text-\[\#1A5276\] { color: #1A5276; }   /* 6 digits */
+.text-\[\#0006ff\] { color: #0006ff; }   /* 6 digits */
+.text-\[\#149AC5\] { color: #149AC5; }   /* 6 digits */
+.text-\[\#0B2\]    { color: #0B2; }      /* 3 digits */
+.text-\[\#191\]    { color: #191; }      /* 3 digits */
+.text-\[\#1919\]   { color: #1919; }     
   .text-\[\#191970\] {
     color: #191970;
   }
@@ -1496,9 +1461,7 @@
   .text-\[\#FF7A00\] {
     color: #FF7A00;
   }
-  .text-\[\#\] {
-    color: #;
-  }
+  
   .text-\[\#eeeeee\] {
     color: #eeeeee;
   }

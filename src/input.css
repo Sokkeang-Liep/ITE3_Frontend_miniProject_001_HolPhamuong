@@ -58,4 +58,40 @@ input[type="password"]::-ms-clear {
   opacity: 1;
   transform: translateY(0);
 }
+  .section-title {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #f59e0b;
+    font-weight: 600;
+  }
 
+  .heading {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .subtext {
+    color: #6b7280;
+    line-height: 1.8;
+  }
+
+  .card {
+    transition: 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+  }
+
+  .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+  }
+
+  .fade.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
