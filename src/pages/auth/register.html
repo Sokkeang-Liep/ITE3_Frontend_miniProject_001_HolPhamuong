@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body class="bg-gradient-to-br from-[#ECF2FF] via-[#ffffff] to-[#dbeafe] min-h-screen">
+
+    <div class="flex items-center justify-center min-h-screen px-4 py-10">
+      <div class="w-full max-w-5xl bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden flex flex-col md:flex-row border border-white/50">
+
+        <!-- LEFT -->
+        <div class="hidden md:flex md:w-1/2 items-center justify-center bg-white p-6">
+          <img
+            src="https://cdni.iconscout.com/illustration/premium/thumb/online-registration-illustration-svg-download-png-6381807.png"
+            class="w-full h-full object-contain max-h-[600px]"
+            alt="Register"
+          />
+        </div>
+
+        <!-- RIGHT -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center p-6 sm:p-8 lg:p-10 bg-[#ECF2FF]">
+
+          <h2 class="text-3xl text-center font-bold text-[#1A5276] mb-8">
+            Register
+          </h2>
+
+<form action="/src/pages/auth/login.html" class="space-y-6 flex flex-col items-center">
+ 
+  <div class="w-full sm:w-11/12 space-y-1">
+    <label class="block font-bold text-[#1A5276]">Full Name</label>
+    <input
+      type="text"
+      class="w-full p-2 border border-[#1A5276] rounded-lg bg-white focus:ring-2 focus:ring-[#149AC5] outline-none"
+      placeholder="Enter full name"
+    />
+  </div>
+
+  <!-- EMAIL -->
+  <div class="w-full sm:w-11/12 space-y-1">
+    <label class="block font-bold text-[#1A5276]">Email</label>
+    <input
+      type="email"
+      class="w-full p-2 border border-[#1A5276] rounded-lg bg-white focus:ring-2 focus:ring-[#149AC5] outline-none"
+      placeholder="Enter email"
+    />
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="relative w-full sm:w-11/12 space-y-1">
+    <label class="block font-bold text-[#1A5276]">Password</label>
+
+    <input
+      type="password"
+      class="w-full p-2 border border-[#1A5276] rounded-lg bg-white focus:ring-2 focus:ring-[#149AC5] outline-none"
+      placeholder="Enter password"
+    />
+
+    <button type="button" class="absolute top-9 right-3 text-gray-600">
+      <i class="fa-solid fa-eye-slash"></i>
+    </button>
+  </div>
+
+  <!-- CONFIRM PASSWORD -->
+  <div class="relative w-full sm:w-11/12 space-y-1">
+    <label class="block font-bold text-[#1A5276]">Confirm Password</label>
+
+    <input
+      type="password"
+      class="w-full p-2 border border-[#1A5276] rounded-lg bg-white focus:ring-2 focus:ring-[#149AC5] outline-none"
+      placeholder="Confirm password"
+    />
+
+    <button type="button" class="absolute top-9 right-3 text-gray-600">
+      <i class="fa-solid fa-eye-slash"></i>
+    </button>
+  </div>
+
+  <!-- BUTTON -->
+  <button
+    type="submit"
+    class="w-full sm:w-11/12 bg-[#154360] text-white py-2 rounded-full mt-2 hover:bg-[#149AC5] transition font-semibold"
+  >
+    Register
+  </button>
+
+</form>
+
+          <p class="mt-6 text-center text-lg text-[#1A5276]">
+            Already have an account?
+            <a href="/src/pages/auth/login.html" class="hover:underline font-semibold">
+              Login
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <script>
+      function toggleDark() {
+        document.documentElement.classList.toggle("dark");
+
+        document.getElementById("sun").classList.toggle("hidden");
+        document.getElementById("moon").classList.toggle("hidden");
+      }
+
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body class="bg-white text-[#191970] dark:bg-gray-900 dark:text-white transition-colors duration-500">
+    <header class="sticky top-0 z-50">
+      <nav
+        class="w-full backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-md p-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="/">
+            <img src="/images/logo.png" class="h-10 md:h-12" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex space-x-8 font-medium">
+          <a
+            href="/index.html"
+            class="text-[#191970] dark:text-blue-400 font-semibold hover:text-[#FF7A00]"
+            >Home</a
+          >
+
+          <div class="relative group">
+            <a
+              class="text-blue-600 hover:text-[#FF7A00] dark:text-white cursor-pointer inline-block"
+            >
+              Product
+            </a>
+
+            <!-- dropdown -->
+            <div
+              class="absolute left-0 mt-0 w-40 bg-white dark:bg-gray-700 shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50"
+            >
+              <a
+                href="/src/pages/women.html"
+                class="block px-4 py-2 hover:text-[#FF7A00] dark:hover:bg-gray-600 text-[#191970]"
+              >
+                Women
+              </a>
+
+              <a
+                href="/src/pages/men.html"
+                class="block px-4 py-2 hover:text-[#FF7A00] dark:hover:bg-gray-600 text-[#191970]"
+              >
+                Men
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="/src/pages/aboutus.html"
+            class="text-[#191970] dark:text-white hover:text-[#FF7A00]"
+            >About Us</a
+          >
+          <a
+            href="/src/pages/contact.html"
+            class="text- [#191970] dark:text-white hover:text-[#FF7A00]"
+            >Contact Us</a
+          >
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <!-- SEARCH -->
+          <div
+            class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-2"
+          >
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-transparent outline-none text-[#191970] dark:text-white w-40"
+            />
+          </div>
+
+          <!-- DARK MODE BUTTON -->
+          <button onclick="toggleDark()" class="p-2">
+            <svg
+              id="sun"
+              class="w-6 h-6 text-[#191970]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+
+            <svg
+              id="moon"
+              class="w-6 h-6 hidden text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 018.707 2.707A8.001 8.001 0 1017.293 13.293z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="/src/pages/auth/register.html"
+            class="px-4 py-2 border rounded-full dark:text-white text-[#191970]"
+            >Register</a
+          >
+          <a
+            href="/src/pages/auth/login.html"
+            class="px-6 py-2 bg-[#191970] text-white rounded-full"
+            >Login</a
+          >
+        </div>
+
+        <!-- HAMBURGER -->
+        <button
+          onclick="toggleMenu()"
+          class="lg:hidden text-2xl text-[#191970] dark:text-white z-50"
+        >
+          ☰
+        </button>
+
+        <!-- MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-lg rounded-xl mt-3 p-5 flex flex-col space-y-3 lg:hidden z-50"
+        >
+          <a
+            href="/"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >Home</a
+          >
+
+          <!-- PRODUCT DROPDOWN -->
+          <div>
+            <p
+              class="dark:text-white font-medium hover:text-[#FF7A00] text-[#191970]"
+            >
+              Product
+            </p>
+
+            <div class="pl-3 flex flex-col space-y-2 mt-2">
+              <a
+                href="/src/pages/women.html"
+                class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+              >
+                Women
+              </a>
+
+              <a
+                href="/src/pages/men.html"
+                class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+              >
+                Men
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="/src/pages/aboutus.html"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >About Us</a
+          >
+          <a
+            href="/src/pages/contact.html"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >Contact Us</a
+          >
+
+          <!-- BUTTONS -->
+          <div class="flex flex-col space-y-2 pt-3">
+            <a
+              href="/src/pages/auth/register.html"
+              class="border border-[#1A5276] text-[#191970] dark:text-white px-4 py-2 rounded-full text-center"
+            >
+              Register
+            </a>
+
+            <a
+              href="/src/pages/auth/login.html"
+              class="bg-[#191970] text-white px-4 py-2 rounded-full text-center"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      
+    </main>
+
+    <footer class="bg-white dark:bg-gray-900 mt-12 fade-up">
+  <div class="container mx-auto px-8 py-10">
+
+    <!-- MAIN GRID -->
+    <div class="flex flex-col space-y-10 md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:space-y-0 lg:flex lg:flex-row lg:justify-between lg:items-start">
+
+      <!-- ORGANIZED -->
+      <div class="flex flex-col items-center text-center fade-up" style="transition-delay: 0ms;">
+        <h4 class="font-bold text-lg mb-6">Organized and Sponsored By</h4>
+
+        <img src="/images/istad_logo.png" alt="ISTAD"
+          class="w-40 object-contain" />
+      </div>
+
+      <!-- PREPARED -->
+      <div class="flex flex-col items-center text-center fade-up" style="transition-delay: 150ms;">
+        <h4 class="font-bold text-lg mb-6">Prepared By</h4>
+
+        <img src="/images/logo.png" alt="HolPhamoung logo"
+          class="w-55 object-contain" />
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="text-center md:text-center lg:text-left fade-up" style="transition-delay: 300ms;">
+        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+
+        <ul class="space-y-2">
+          <li><a href="/index.html" class="hover:text-[#FF7A00] hover:underline transition">Home</a></li>
+          <li><a href="/jobs" class="hover:text-[#FF7A00] hover:underline transition">Product</a></li>
+          <li><a href="/src/pages/aboutus.html" class="hover:text-[#FF7A00] hover:underline transition">About Us</a></li>
+          <li><a href="/src/pages/contact.html" class="hover:text-[#FF7A00] hover:underline transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="text-center md:text-center lg:text-left fade-up" style="transition-delay: 450ms;">
+        <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+
+        <div class="flex flex-col space-y-3">
+
+          <!-- EMAIL -->
+          <div class="flex items-start space-x-2 justify-center lg:justify-start hover:text-[#FF7A00]">
+            <i class="fa-regular fa-envelope"></i>
+            <span>info@HolPhamuong.com</span>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="flex items-start space-x-2 justify-center lg:justify-start hover:text-[#FF7A00]">
+            <i class="fa-regular fa-map"></i>
+
+            <address class="not-italic">
+              #24, St.562, Boeung Kak,<br />
+              Toul Kork, Phnom Penh,<br />
+              Cambodia
+            </address>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="mt-10 pt-4 border-t border-gray-300 dark:border-gray-700 text-center text-sm fade-up" style="transition-delay: 600ms;">
+      <p>© 2026 HOL PHAMUONG. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const startCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const speed = target / 100; // adjust speed
+
+    const update = () => {
+      count += speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target); // run once only
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  items.forEach(item => observer.observe(item));
+});
+</script>
+  </body>
+</html>   

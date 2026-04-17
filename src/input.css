@@ -1,0 +1,61 @@
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.suwannaphum {
+  font-family: "Suwannaphum", serif;
+}
+/* Hide browser default password reveal icon (Edge/Chrome) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+ .image-container {
+            position: relative; /* Needed for absolute positioning of children */
+        }
+        .icon-overlay {
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            display: flex;
+            gap: 10px; /* Space between icons */
+        }
+        .icon-circle {
+            width: 48px; /* Smaller size for icons */
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .icon-circle:hover {
+            transform: translateY(-5px);
+        }
+        .icon-circle i {
+            color: white;
+            font-size: 20px; /* Smaller icon size */
+        }
+      
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+

@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <script>
+      function toggleDark() {
+        document.documentElement.classList.toggle("dark");
+
+        document.getElementById("sun").classList.toggle("hidden");
+        document.getElementById("moon").classList.toggle("hidden");
+      }
+
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body class="bg-white text-[#191970] dark:bg-gray-900 dark:text-white transition-colors duration-500">
+    <header class="sticky top-0 z-50">
+      <nav
+        class="w-full backdrop-blur-md bg-white/70 dark:bg-gray-900/70 shadow-md p-4 flex items-center justify-between"
+      >
+        <div class="flex items-center">
+          <a href="/">
+            <img src="/images/logo.png" class="h-10 md:h-12" />
+          </a>
+        </div>
+
+        <div class="hidden lg:flex space-x-8 font-medium">
+          <a
+            href="/index.html"
+            class="text-blue-600 dark:text-blue-400 font-semibold hover:text-[#FF7A00]"
+            >Home</a
+          >
+
+          <div class="relative group">
+            <a
+              class="text-[#191970] hover:text-[#FF7A00] dark:text-white cursor-pointer inline-block"
+            >
+              Product
+            </a>
+
+            <!-- dropdown -->
+            <div
+              class="absolute left-0 mt-0 w-40 bg-white dark:bg-gray-700 shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50"
+            >
+              <a
+                href="/src/pages/women.html"
+                class="block px-4 py-2 hover:text-[#FF7A00] dark:hover:bg-gray-600 text-[#191970]"
+              >
+                Women
+              </a>
+
+              <a
+                href="/src/pages/men.html"
+                class="block px-4 py-2 hover:text-[#FF7A00] dark:hover:bg-gray-600 text-[#191970]"
+              >
+                Men
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="/src/pages/aboutus.html"
+            class="text-[#191970] dark:text-white hover:text-[#FF7A00]"
+            >About Us</a
+          >
+          <a
+            href="/src/pages/contact.html"
+            class="text-[#191970] dark:text-white hover:text-[#FF7A00]"
+            >Contact Us</a
+          >
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <!-- SEARCH -->
+          <div
+            class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-2"
+          >
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-transparent outline-none text-[#191970] dark:text-white w-40"
+            />
+          </div>
+
+          <!-- DARK MODE BUTTON -->
+          <button onclick="toggleDark()" class="p-2">
+            <svg
+              id="sun"
+              class="w-6 h-6 text-[#191970]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+
+            <svg
+              id="moon"
+              class="w-6 h-6 hidden text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 018.707 2.707A8.001 8.001 0 1017.293 13.293z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="/src/pages/auth/register.html"
+            class="px-4 py-2 border rounded-full dark:text-white text-[#191970]"
+            >Register</a
+          >
+          <a
+            href="/src/pages/auth/login.html"
+            class="px-6 py-2 bg-[#191970] text-white rounded-full"
+            >Login</a
+          >
+        </div>
+
+        <!-- HAMBURGER -->
+        <button
+          onclick="toggleMenu()"
+          class="lg:hidden text-2xl text-[#191970] dark:text-white z-50"
+        >
+          ☰
+        </button>
+
+        <!-- MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-lg rounded-xl mt-3 p-5 flex flex-col space-y-3 lg:hidden z-50"
+        >
+          <a
+            href="/"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >Home</a
+          >
+
+          <!-- PRODUCT DROPDOWN -->
+          <div>
+            <p
+              class="dark:text-white font-medium hover:text-[#FF7A00] text-[#191970]"
+            >
+              Product
+            </p>
+
+            <div class="pl-3 flex flex-col space-y-2 mt-2">
+              <a
+                href="/src/pages/women.html"
+                class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+              >
+                Women
+              </a>
+
+              <a
+                href="/src/pages/men.html"
+                class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+              >
+                Men
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="/src/pages/aboutus.html"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >About Us</a
+          >
+          <a
+            href="/src/pages/contact.html"
+            class="dark:text-white hover:text-[#FF7A00] text-[#191970]"
+            >Contact Us</a
+          >
+
+          <!-- BUTTONS -->
+          <div class="flex flex-col space-y-2 pt-3">
+            <a
+              href="/src/pages/auth/register.html"
+              class="border border-[#1A5276] text-[#191970] dark:text-white px-4 py-2 rounded-full text-center"
+            >
+              Register
+            </a>
+
+            <a
+              href="/src/pages/auth/login.html"
+              class="bg-[#191970] text-white px-4 py-2 rounded-full text-center"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative w-full min-h-screen bg-white dark:bg-gray-900 overflow-hidden flex items-center transition-colors duration-500">
+
+  <!-- BACKGROUND GLOW (fade in) -->
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FF7A00]/20 blur-3xl rounded-full fade-up"></div>
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#191970]/20 blur-3xl rounded-full fade-up"></div>
+
+  <div class="w-full max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+    <!-- LEFT TEXT -->
+    <div class="fade-up">
+      
+      <h1 class="text-2xl md:text-4xl font-extrabold leading-tight text-[#191970] dark:text-white fade-up">
+        <span class="block text-5xl md:text-7xl mb-4 tracking-wide suwannaphum leading-tight fade-up">
+          ក្រណាត់សូត្រខ្មែរ
+        </span>
+
+        Elegant <br>
+        <span class="italic text-[#FF7A00] fade-up"> Khmer Clothing </span>
+      </h1>
+
+      <p class="mt-6 text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg text-lg fade-up">
+        Hol Phamuong is where Khmer traditional fashion meets the world.
+        We make it easy for everyone, everywhere to discover and wear timeless Cambodian-inspired clothing.
+      </p>
+
+      <!-- CTA -->
+      <div class="mt-10 flex flex-wrap gap-4 fade-up">
+        <a href="#shop"
+           class="bg-[#191970] text-white px-7 py-3 rounded-full hover:bg-[#14145c] transition">
+          Shop Now
+        </a>
+
+        <a href="#collection"
+           class="border border-[#191970] text-[#191970] px-7 py-3 rounded-full hover:bg-[#191970] hover:text-white transition">
+          View Collection
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="flex justify-center lg:justify-end fade-up">
+      <img
+        src="https://i.pinimg.com/originals/20/27/a2/2027a25ed3dd0ea0f83ace7334307e6a.jpg"
+        alt="Khmer Silk Clothes"
+        class="w-full max-w-2xl object-cover rounded-3xl shadow-2xl hover:scale-105 transition duration-300"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section class="bg-white border-b border-[#e6e6e6] dark:bg-gray-800 dark:border-0 text-[#191970]">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+
+    <!-- CARD 1 -->
+    <div class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-b sm:border-b md:border-b lg:border-b-0 border-r border-[#e6e6e6] dark:border-r-gray-500 fade-up"
+         style="transition-delay: 0ms;">
+      <div>
+        <img src="/images/delivery.png" alt="delivery"
+          class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+      </div>
+      <div class="text-left">
+        <p class="text-sm sm:text-base md:text-lg font-bold mb-1 dark:text-gray-200">
+          Free <span class="font-normal dark:text-gray-200">Shipping</span>
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Save up to $70</p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-b sm:border-b md:border-b lg:border-b-0 border-r border-[#e6e6e6] dark:border-r-gray-500 fade-up"
+         style="transition-delay: 150ms;">
+      <div>
+        <img src="/images/cupon.png" alt="delivery"
+          class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+      </div>
+      <div class="text-left">
+        <p class="text-sm sm:text-base md:text-lg font-bold mb-1 dark:text-gray-200">
+          Member <span class="font-normal dark:text-gray-200">Coupons</span>
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Save your purchase</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-r border-[#e6e6e6] dark:border-r-gray-500 fade-up"
+         style="transition-delay: 300ms;">
+      <div>
+        <img src="/images/creditCard.png" alt="delivery"
+          class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+      </div>
+      <div class="text-left">
+        <p class="text-sm sm:text-base md:text-lg font-bold mb-1 dark:text-gray-200">
+          Secure <span class="font-normal dark:text-gray-200">Payments</span>
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">All Credit Cards</p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 fade-up"
+         style="transition-delay: 450ms;">
+      <div>
+        <img src="/images/listCheck.png" alt="delivery"
+          class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+      </div>
+      <div class="text-left">
+        <p class="text-sm sm:text-base md:text-lg font-bold mb-1 dark:text-gray-200">
+          Fast <span class="font-normal dark:text-gray-200">Delivery</span>
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Fast On Delivery</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+      
+     <!-- New Collection  -->
+      <section class="py-25 bg-white text-center dark:bg-gray-900">
+        <div class="relative inline-block">
+          <div
+            class="absolute w-36 h-36 -top-4 left-1/2 transform -translate-x-1/2 rounded-full border-8 border-[#f2f2ff] circle dark:border-[#a4a4eb]"
+          ></div>
+          <i
+            class="fa-solid fa-caret-down text-[#0006ff] text-5xl absolute -top-4 left-1/2 transform -translate-x-1/2 mt-3"
+          ></i>
+
+          <div class="mt-8">
+            <h2
+              class="text-[25px] sm:text-3xl md:text-4xl font-bold text-[#191970] mb-2 relative z-10 t-white dark:text-gray-100"
+            >
+              New
+              <i class="font-normal text-[#FF7A00] t-white dark:text-gray-300">Collections</i>
+              Of Arrivals
+            </h2>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Card of New Collections Of Arrivals -->
+     <section class="bg-white dark:bg-gray-900 py-14">
+  <div class="max-w-screen-xl mx-auto px-4">
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 auto-rows-[320px]">
+
+      <!-- IMAGE 1 -->
+      <div class="rounded-2xl overflow-hidden group fade-up" style="transition-delay: 0ms;">
+        <img src="https://i.ebayimg.com/images/g/unYAAeSwmvtp39hI/s-l1600.webp"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+      </div>
+
+      <!-- IMAGE 2 -->
+      <div class="rounded-2xl overflow-hidden group md:col-span-2 md:row-span-2 fade-up" style="transition-delay: 150ms;">
+        <img src="https://i.ebayimg.com/images/g/ZE4AAOSwzSFmuBde/s-l1600.webp"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+      </div>
+
+      <!-- IMAGE 3 -->
+      <div class="rounded-2xl overflow-hidden group fade-up" style="transition-delay: 300ms;">
+        <img src="https://i.ebayimg.com/images/g/Tg0AAeSw1ldp1W3l/s-l1600.webp"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+      </div>
+
+      <!-- IMAGE 4 -->
+      <div class="rounded-2xl overflow-hidden group fade-up" style="transition-delay: 450ms;">
+        <img src="https://i.ebayimg.com/images/g/JVcAAeSw5Jpp3sE7/s-l1600.webp"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+      </div>
+
+      <!-- IMAGE 5 -->
+      <div class="rounded-2xl overflow-hidden group fade-up" style="transition-delay: 600ms;">
+        <img src="https://i.ebayimg.com/images/g/LMsAAeSwR0tpvxXR/s-l1600.webp"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- static -->
+ <section class="py-25 bg-white text-center dark:bg-gray-900">
+        <div class="relative inline-block">
+          <div
+            class="absolute w-36 h-36 -top-4 left-1/2 transform -translate-x-1/2 rounded-full border-8 border-[#f2f2ff] circle dark:border-[#a4a4eb]"
+          ></div>
+          <i
+            class="fa-solid fa-caret-down text-[#0006ff] text-5xl absolute -top-4 left-1/2 transform -translate-x-1/2 mt-3"
+          ></i>
+
+          <div class="mt-8">
+            <h2
+              class="text-[25px] sm:text-3xl md:text-4xl font-bold text-[#191970] mb-2 relative z-10 t-white dark:text-gray-100"
+            >
+              We are expert in 
+              <i class="font-normal text-[#FF7A00] t-white dark:text-gray-300">traditional clothes</i>
+              
+            </h2>
+            
+          </div>
+        </div>
+      </section>
+
+<section>
+    
+    <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto pt-10 px-4 pb-16"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-[#191970] rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="15"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >+</span
+            >
+          </div>
+          <p class="text-[#191970] text-base sm:text-lg text-center dark:text-white">
+            Years of Experience
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-[#191970] rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="5000"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >+</span
+            >
+          </div>
+          <p class="text-[#191970] text-base sm:text-lg text-center dark:text-white">
+            Available Designs
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-[#191970] rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="10"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >k</span
+            >
+          </div>
+          <p class="text-[#191970] text-base sm:text-lg text-center dark:text-white">
+             Products Sold
+          </p>
+        </div>
+      </div>
+</section>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-900 mt-12 fade-up">
+  <div class="container mx-auto px-8 py-10">
+
+    <!-- MAIN GRID -->
+    <div class="flex flex-col space-y-10 md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:space-y-0 lg:flex lg:flex-row lg:justify-between lg:items-start">
+
+      <!-- ORGANIZED -->
+      <div class="flex flex-col items-center text-center fade-up" style="transition-delay: 0ms;">
+        <h4 class="font-bold text-lg mb-6">Organized and Sponsored By</h4>
+
+        <img src="/images/istad_logo.png" alt="ISTAD"
+          class="w-40 object-contain" />
+      </div>
+
+      <!-- PREPARED -->
+      <div class="flex flex-col items-center text-center fade-up" style="transition-delay: 150ms;">
+        <h4 class="font-bold text-lg mb-6">Prepared By</h4>
+
+        <img src="/images/logo.png" alt="HolPhamoung logo"
+          class="w-55 object-contain" />
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="text-center md:text-center lg:text-left fade-up" style="transition-delay: 300ms;">
+        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+
+        <ul class="space-y-2">
+          <li><a href="/index.html" class="hover:text-[#FF7A00] hover:underline transition">Home</a></li>
+          <li><a href="/jobs" class="hover:text-[#FF7A00] hover:underline transition">Product</a></li>
+          <li><a href="/src/pages/aboutus.html" class="hover:text-[#FF7A00] hover:underline transition">About Us</a></li>
+          <li><a href="/src/pages/contact.html" class="hover:text-[#FF7A00] hover:underline transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="text-center md:text-center lg:text-left fade-up" style="transition-delay: 450ms;">
+        <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+
+        <div class="flex flex-col space-y-3">
+
+          <!-- EMAIL -->
+          <div class="flex items-start space-x-2 justify-center lg:justify-start hover:text-[#FF7A00]">
+            <i class="fa-regular fa-envelope"></i>
+            <span>info@HolPhamuong.com</span>
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="flex items-start space-x-2 justify-center lg:justify-start hover:text-[#FF7A00]">
+            <i class="fa-regular fa-map"></i>
+
+            <address class="not-italic">
+              #24, St.562, Boeung Kak,<br />
+              Toul Kork, Phnom Penh,<br />
+              Cambodia
+            </address>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="mt-10 pt-4 border-t border-gray-300 dark:border-gray-700 text-center text-sm fade-up" style="transition-delay: 600ms;">
+      <p>© 2026 HOL PHAMUONG. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const startCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const speed = target / 100; // adjust speed
+
+    const update = () => {
+      count += speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target); // run once only
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  items.forEach(item => observer.observe(item));
+});
+</script>
+  </body>
+</html>   
