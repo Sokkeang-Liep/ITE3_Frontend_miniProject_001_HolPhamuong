@@ -1,5 +1,4 @@
 
-@custom-variant dark (&:where(.dark, .dark *));
 
 @import url('https://fonts.googleapis.com/css2?family=Suwannaphum:wght@100;300;400;700;900&display=swap');
 
@@ -95,3 +94,371 @@ input[type="password"]::-ms-clear {
     opacity: 1;
     transform: translateY(0);
   }
+
+
+/* ── HERO ── */
+    .hero {
+      position: relative; height: 100vh; min-height: 700px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(160deg, rgba(139,26,26,0.55) 0%, rgba(28,28,28,0.75) 60%, rgba(201,168,76,0.2) 100%),
+        url('/images/womenHero.png') center/cover no-repeat;
+    }
+    .hero-pattern {
+      position: absolute; inset: 0; opacity: 0.06;
+      background-image: repeating-linear-gradient(
+        45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 20px
+      ), repeating-linear-gradient(
+        -45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 20px
+      );
+    }
+    .hero-content {
+      position: relative; text-align: center; color: white;
+      padding: 0 2rem; animation: fadeUp 1.2s ease both;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--gold);
+      padding: 0.35rem 1.5rem; margin-bottom: 1.5rem;
+      animation: fadeUp 1s 0.3s ease both;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 900; line-height: 1.05;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+      animation: fadeUp 1s 0.5s ease both;
+    }
+    .hero-title em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      font-size: 1.25rem; font-weight: 300; letter-spacing: 0.05em;
+      margin-top: 1rem; opacity: 0.85;
+      animation: fadeUp 1s 0.7s ease both;
+    }
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: inline-block;
+      background: var(--gold); color: var(--charcoal);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 1rem 3rem; text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      animation: fadeUp 1s 0.9s ease both;
+    }
+    .hero-cta:hover { background: #e0bb6a; transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.5); font-size: 0.65rem; letter-spacing: 0.3em;
+      text-transform: uppercase; animation: bounce 2s infinite;
+
+    }
+    .star {
+  color: #facc15; /* nice yellow */
+}
+    /* ── SECTION COMMON ── */
+    section { padding: 6rem 5rem; }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-tag {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 700;
+      color: var(--charcoal); line-height: 1.2;
+    }
+    .section-line {
+      width: 60px; height: 2px; background: var(--gold);
+      margin: 1rem auto 0;
+    }
+
+   
+     /* ── DISCOUNT SECTION ── */
+    .discount-section { background: var(--charcoal); }
+    .discount-section .section-title { color: var(--cream); }
+    .discount-section .section-tag { color: var(--gold); }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+
+  justify-items: center; 
+  align-items: start;
+}
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+
+  justify-items: center;
+  align-items: start;
+}
+
+/* ── PRODUCT CARD ── */
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 260px;
+   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* IMAGE (IMPORTANT: controls height) */
+.card-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DISCOUNT BADGE */
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #dc2626;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* BODY (compact like tour cards) */
+.card-body {
+  padding: 10px 12px;
+}
+
+/* CATEGORY */
+.card-category {
+  font-size: 11px;
+  color: #f59e0b;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* NAME (limit lines so card not long) */
+.card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #191970;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+/* PRICE */
+.price-sale {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.price-orig {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* BUTTON */
+.card-btn {
+  margin-top: 8px;
+  background: #191970;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 12px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #FF7A00;
+}
+
+/* ── RECOMMEND SECTION ── */
+
+.recommend-section {
+  background: #f8f8f8; /* 🔥 changed from dark to light */
+  padding: 5rem 0;
+}
+
+.recommend-section .section-title {
+  color: #191970;
+}
+
+/* GRID */
+.recommend-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.recommend-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+/* ── FEATURED CARD ── */
+.recommend-featured {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  cursor: pointer;
+
+  height: 500px;   /* fixed height */
+}
+
+.recommend-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crop image, no resize box */
+  display: block;
+}
+
+/* ── SMALL CARD ── */
+.recommend-small {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  border-radius: 18px; /* 🔥 rounded */
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+.recommend-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.recommend-featured:hover img,
+.recommend-small:hover img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY (cleaner + softer) */
+.rec-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.1)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.2rem;
+}
+
+/* LABEL */
+.rec-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  margin-bottom: 6px;
+}
+
+/* TITLE */
+.rec-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.recommend-featured .rec-title {
+  font-size: 26px;
+}
+
+/* PRICE */
+.rec-price {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.rec-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #191970;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.rec-btn:hover {
+  background: #FF7A00;
+}
+
+/* BADGE */
+.rec-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #dc2626;
+  color: white;
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+/* ===== SECTION FADE UP ANIMATION ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional: nicer stagger feel for cards */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
